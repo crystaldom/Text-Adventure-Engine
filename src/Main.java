@@ -2,19 +2,19 @@ import java.util.Scanner;
 public class Main {
 
 	public static void main(String[] args) {
-		room map[][] = new room[3][3];
-		player player = new player(0,0);
+		Room map[][] = new Room[3][3];
+		Player player = new Player(0,0);
 		
 	}
 
 }
 
-class player
+class Player
 {
 	int x;
 	int y;
 	Scanner input = new Scanner(System.in);
-	player(int startingX, int startingY) //player constructor
+	Player(int startingX, int startingY) //player constructor
 	{
 		this.x = startingX;
 		this.y = startingY;
@@ -37,14 +37,14 @@ class player
 	}
 }
 
-class room
+class Room
 {
 	String name;
 	String description;
 	int x;
 	int y;
-	thing contents[];
-	room(String name, String description, int x, int y, thing contents[])
+	Thing contents[];
+	Room(String name, String description, int x, int y, Thing contents[])
 	{
 		this.contents = contents;
 		this.name = name;
@@ -65,12 +65,12 @@ class room
 	}
 }
 
-class thing
+class Thing
 {
 	String name;
 	String description;
 	int value;
-	thing(String name, String description, int value)
+	Thing(String name, String description, int value)
 	{
 		this.name = name;
 		this.description = description;
