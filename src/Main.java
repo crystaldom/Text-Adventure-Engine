@@ -4,6 +4,7 @@ public class Main {
 	public static void main(String[] args) {
 		Room map[][] = new Room[3][3];
 		Player player = new Player(0,0);
+		map[0][0] = new LimitedRoom("","",0,0,null,true,true,true,true);
 		
 	}
 
@@ -43,7 +44,7 @@ class Room
 	String description;
 	int x;
 	int y;
-	Thing contents[];
+	Thing contents[]; //if the room is empty, just set to null
 	Room(String name, String description, int x, int y, Thing contents[])
 	{
 		this.contents = contents;
@@ -52,7 +53,7 @@ class Room
 		this.x = x;
 		this.y = y;
 	}
-	public boolean isEmpty()
+	public boolean isEmpty() //a little function that returns true if the room is empty (or rather if it started off empty)
 	{
 		if (this.contents == null)
 		{
@@ -76,4 +77,8 @@ class Thing
 		this.description = description;
 		this.value = value;
 	}
+}
+class GameController
+{
+	GameController(){}
 }
