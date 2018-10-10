@@ -14,7 +14,6 @@ class Player
 {
 	int x;
 	int y;
-	Scanner input = new Scanner(System.in);
 	Player(int startingX, int startingY) //player constructor
 	{
 		this.x = startingX;
@@ -38,33 +37,6 @@ class Player
 	}
 }
 
-class Room
-{
-	String name;
-	String description;
-	int x;
-	int y;
-	Thing contents[]; //if the room is empty, just set to null
-	Room(String name, String description, int x, int y, Thing contents[])
-	{
-		this.contents = contents;
-		this.name = name;
-		this.description = description;
-		this.x = x;
-		this.y = y;
-	}
-	public boolean isEmpty() //a little function that returns true if the room is empty (or rather if it started off empty)
-	{
-		if (this.contents == null)
-		{
-			return true;
-		}
-		else
-		{
-			return false;
-		}
-	}
-}
 
 class Thing
 {
@@ -78,7 +50,13 @@ class Thing
 		this.value = value;
 	}
 }
-class GameController
+class GameController //runs things like room loading and string parsing
 {
+	Scanner input = new Scanner(System.in);
 	GameController(){}
+	boolean gameRun;
+	public void loadroom()
+	{
+		
+	}
 }
